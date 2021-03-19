@@ -171,7 +171,7 @@ end
 
 --Drop off bags
 function dropbag()
-	wait(5)
+	wait(20)
 	local pos = game.Workspace.BagSecuredArea.EscapeVan.PrimaryPart.Position
 	tp(pos.x,pos.y,pos.z)
 	game:GetService("ReplicatedStorage")["RS_Package"].Remotes.ThrowBag:FireServer(Vector3.new(0, 0, 0))
