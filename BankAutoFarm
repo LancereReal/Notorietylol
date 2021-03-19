@@ -130,14 +130,14 @@ end
 
 --Grab lootbox
 function lootbox()
-	if game.Workspace:FindFirstChild('SafeSpots') ~= nil then
-		for _,i in pairs(game.Workspace.SafeSpots:GetChildren()) do
-			if i.Name ~= 'SafesScript' then
+	if game:FindFirstChild('Workspace') ~= nil then
+		for _,i in pairs(game.Workspace:GetChildren()) do
+			if i.Name ~= 'Deposit..' then
 				local pos = i.PrimaryPart.Position
 				repeat wait()
 				tp(pos.x,pos.y+1,pos.z)
 				interact(i)
-				until not i:IsDescendantOf(Workspace.SafeSpots)
+				until not i:IsDescendantOf(Workspace)
 			elseif i == nil then
 				return true
 			else end
