@@ -171,6 +171,7 @@ end
 
 --Drop off bags
 function dropbag()
+	wait(5)
 	local pos = game.Workspace.BagSecuredArea.EscapeVan.PrimaryPart.Position
 	tp(pos.x,pos.y,pos.z)
 	game:GetService("ReplicatedStorage")["RS_Package"].Remotes.ThrowBag:FireServer(Vector3.new(0, 0, 0))
@@ -181,8 +182,7 @@ end
 
 --Reset game
 function reset()
-	local Event = game:GetService("ReplicatedStorage")["RS_Package"].Remotes.VoteReset
-	Event:FireServer()
+	print("No.")
 end
 
 
