@@ -223,7 +223,8 @@ end
 spawn(noclip)
 spawn(killswitch)
 removemap()
-if grabsafe == true then if lootbox() == true then end end
+if grabsafe == true then end
+if lootbox() == true then end
 if picklock() == true then end
 if lootsmall() == true then end
 if lootbig() == true then end
